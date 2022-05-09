@@ -9,7 +9,7 @@ function Login() {
     return (
         <>
             <div className="main">
-                <video autoPlay muted loop>
+                <video autoPlay muted loop playsinline>
                     <source src={bg} type="video/mp4" />
                 </video>
                 <Header />
