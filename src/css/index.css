@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+body{
+  min-height: 100vh;
+  backdrop-filter: blur(4px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.376) 0%, rgba(0, 0, 0, 0.555) 91.67%),url("../assets/bg.jpg") no-repeat center center/cover ;
+}
+
+.main{
+  height: 100vh;
+  padding: 3rem;
+  position: relative;
+}
+
+/* login card styling */
+.login{
+  background: rgba(27, 26, 27, 0.9);
+  color: rgb(255, 255, 255);
+  padding: 2rem 1.6rem;
+  width: 94%;
+  max-width: 422px;
+  height: 252px;
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  border-radius: 14px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.login h3{
+  margin: 10px 0px;
+}
+
+.login> * {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.input select, .login_btn,.input input{
+  height: 4.5rem;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+}
+
+.input{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.input input{
+  width: 75%;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.input select{
+  width: 23%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  padding: 0 3px;
+}
+
+.input option{
+  background-color: rgba(0, 0, 0, 0.75);
+  font-size: 1.6rem;
+}
+
+::placeholder { 
+  color: rgb(255, 255, 255);
+  opacity: 1; 
+}
+
+:-ms-input-placeholder {
+  color: rgb(255, 255, 255);
+}
+
+::-ms-input-placeholder { 
+  color: rgb(255, 255, 255);
+}
+
+.login_btn{
+  width: 100%;
+  font-weight: 600;
+  background: linear-gradient(91.03deg, rgba(255,214,10,1.0) 2.92%, rgba(255,159,10,1.0) 98.41%);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  margin: 2rem 0;
+  cursor: pointer;
+  border: none;
+  transition: all .5s ease;
+}
+
+.login_btn:hover{
+  background: linear-gradient(91.03deg, rgb(224, 187, 0) 2.92%, rgb(199, 119, 0) 98.41%);
+}
+
+.login_btn:active{
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.sub{
+  width: 100%;
+  text-align: right;
+}
+
+.sub a{
+  color: rgb(249, 222, 113);
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+/* header styling */
+.logo{
+  display: flex;
+}
+
+.logo img{
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right:8px;
+}
+
+.logo h1{
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.01em;
+}
+
+header p{
+  font-size: 1.6rem;
+  line-height: 150%;
+  text-align: center;
+  margin: 8px 0px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 1rem 0;
+}
+
+.note img{
+  display: none;
+}
+
+.note p{
+  font-size: 1.4rem;
+}
+
+.note{
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+/* footer styling */
+
+footer{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+footer a{
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+footer a:hover{
+  color: rgb(255, 255, 255);
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li{
+  margin: 0 2rem;
+}
+
+video{
+  display: none;
+}
+
+/* mobile responsive design */
+
+@media screen and (max-width:540px){
+
+  body{
+    background: none;
+  }
+  .main{
+    padding: 0;
+  }
+  video{
+    display: initial;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  header{
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+  footer{
+    display: none;
+  }
+
+  .note{
+    position: absolute;
+    bottom: 2rem;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    padding:0 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .note img{
+    display: initial;
+    transition: all .5s ease;
+  }
+  .note img:hover{
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width:340px){
+
+  .login{
+    height: auto;
+  }
+  .input{
+    flex-direction:  column;
+    justify-content: stretch;
+  }
+  .input select,.input input{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+}
