@@ -9,7 +9,7 @@ Open the code directory in terminal
 and run command 
 ###  `npm install`
 
-then move do the below steps
+then do the below steps
 ## Available Scripts
 
 In the project directory, you can run:
